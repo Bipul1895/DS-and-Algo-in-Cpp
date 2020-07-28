@@ -1,0 +1,1 @@
+../build-Debug/AvlTreeCode/AvlTree.cpp.o ../build-Debug/AvlTreeCode/main.cpp.o

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="LearningDsAlgoCLite" Database="" Version="10000">
+  <Project Name="BinaryTree" Path="BinaryTree/BinaryTree.project" Active="No"/>
+  <Project Name="AvlTreeCode" Path="AvlTreeCode/AvlTreeCode.project" Active="No"/>
+  <Project Name="BubbleSort" Path="BubbleSort/BubbleSort.project" Active="No"/>
+  <Project Name="CountSort" Path="CountSort/CountSort.project" Active="No"/>
+  <Project Name="HashingWithChaining" Path="HashingWithChaining/HashingWithChaining.project" Active="No"/>
+  <Project Name="HeapAndHeapSort" Path="HeapAndHeapSort/HeapAndHeapSort.project" Active="No"/>
+  <Project Name="InsertionSort" Path="InsertionSort/InsertionSort.project" Active="No"/>
+  <Project Name="MergeSort" Path="MergeSort/MergeSort.project" Active="No"/>
+  <Project Name="QuickSelect" Path="QuickSelect/QuickSelect.project" Active="No"/>
+  <Project Name="QuickSort" Path="QuickSort/QuickSort.project" Active="No"/>
+  <Project Name="SelectionSort" Path="SelectionSort/SelectionSort.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="BinaryTree" ConfigName="Debug"/>
+      <Project Name="AvlTreeCode" ConfigName="Debug"/>
+      <Project Name="BubbleSort" ConfigName="Debug"/>
+      <Project Name="CountSort" ConfigName="Debug"/>
+      <Project Name="HashingWithChaining" ConfigName="Debug"/>
+      <Project Name="HeapAndHeapSort" ConfigName="Debug"/>
+      <Project Name="InsertionSort" ConfigName="Debug"/>
+      <Project Name="MergeSort" ConfigName="Debug"/>
+      <Project Name="QuickSelect" ConfigName="Debug"/>
+      <Project Name="QuickSort" ConfigName="Debug"/>
+      <Project Name="SelectionSort" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="BinaryTree" ConfigName="Release"/>
+      <Project Name="AvlTreeCode" ConfigName="Release"/>
+      <Project Name="BubbleSort" ConfigName="Release"/>
+      <Project Name="CountSort" ConfigName="Release"/>
+      <Project Name="HashingWithChaining" ConfigName="Release"/>
+      <Project Name="HeapAndHeapSort" ConfigName="Release"/>
+      <Project Name="InsertionSort" ConfigName="Release"/>
+      <Project Name="MergeSort" ConfigName="Release"/>
+      <Project Name="QuickSelect" ConfigName="Release"/>
+      <Project Name="QuickSort" ConfigName="Release"/>
+      <Project Name="SelectionSort" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
