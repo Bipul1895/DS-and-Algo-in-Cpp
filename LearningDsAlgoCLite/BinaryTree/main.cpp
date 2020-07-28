@@ -40,6 +40,10 @@ void levelOrderTraversal(TreeNode* root) {
 //But actually, when we see the situation in the beginning, it is clear.
 //In the beginning, stack in empty but curr is NOT, then we must go on.
 //However, if root is NULL, then stack is empty and root is also NULL, => break;
+
+//Look at code below, the levelOrder, there while condn is : !q.empty()
+//This is because we have inserted an element before entering while loop
+//Here we are not doing that
 void iterPreOrder(TreeNode* root) {
     stack<TreeNode*> stk;
     TreeNode* curr = root;
@@ -80,12 +84,35 @@ void iterInOrder(TreeNode* root) {
     cout << "\n";
 }
 
-int main()
-{
-    int arr[] = {1,2,3,4,5,6,7};
-    int n=7;
+void iterPostOrder(TreeNode* root) {
+    stack< pair<TreeNode*, int> > stk;
+    
+    cout << "Postorder traversal : ";
+    while(root!=nullptr || !stk.empty()) {
+        if(root!=nullptr) {
+            stk.push({root,0});
+            root=root->left;
+        }
+        else{
+            root=stk.top().first;
+            int decide=stk.top().second;
+            
+            if(decide == 0) {//go right
+                stk.top().second=1;
+                root=root->right;
+            }
+            else{
+                cout << root->val << " ";
+                root=nullptr;
+                stk.pop();
+            }
+            
+        }
+    }
+    cout<<"\n";
+}
 
-    //Construct compete binary tree from array
+TreeNode* constructCompleteBinaryTree(int arr[], int n) {
     queue<TreeNode*> q;
     int i=0;
     TreeNode* root = new TreeNode(arr[i]);
@@ -112,12 +139,66 @@ int main()
         
         i++;
     }
-    //constructed binary tree
-    //=======================
+    
+    return root;
+}
+
+TreeNode* constructBinaryTree(int arr[], int n) {
+    queue<TreeNode*> q;
+    int i=0;
+    TreeNode* root = new TreeNode(arr[i]);
+
+    q.push(root);
+
+    while(!q.empty()) {
+        TreeNode* par = q.front();
+        q.pop();
+        
+        if(par==nullptr) {
+            i++;
+            continue;
+        }
+
+        int idx_lchild=2*i + 1;
+        int idx_rchild=2*i + 2;
+
+        if(idx_lchild < n) {
+            if(arr[idx_lchild] != -1) {
+                TreeNode* l_child = new TreeNode(arr[idx_lchild]);
+                par->left = l_child;
+                q.push(l_child);
+            }
+            else q.push(nullptr);
+        }
+        if(idx_rchild < n) {
+            if(arr[idx_rchild] != -1){
+                TreeNode* r_child = new TreeNode(arr[idx_rchild]);
+                par->right = r_child;
+                q.push(r_child);
+            }
+            else q.push(nullptr);
+        }
+        
+        i++;
+    }
+    
+    return root;
+}
+
+
+int main()
+{
+    //-1 reprsents nullptr node
+    int arr[] = {1,2,4,-1,3,5};
+    int n=sizeof(arr)/sizeof(int);
+
+
+    TreeNode* root = constructBinaryTree(arr,n);
 
     levelOrderTraversal(root);
     iterPreOrder(root);
     iterInOrder(root);
+    iterPostOrder(root);
 
 
 }

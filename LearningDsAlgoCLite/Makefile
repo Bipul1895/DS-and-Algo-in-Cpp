@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ SelectionSort - Debug ]----------"
-	@cd "SelectionSort" && "$(MAKE)" -f  "SelectionSort.mk"
+	@echo "----------Building project:[ BinaryTree - Debug ]----------"
+	@cd "BinaryTree" && "$(MAKE)" -f  "BinaryTree.mk"
 clean:
-	@echo "----------Cleaning project:[ SelectionSort - Debug ]----------"
-	@cd "SelectionSort" && "$(MAKE)" -f  "SelectionSort.mk" clean
+	@echo "----------Cleaning project:[ BinaryTree - Debug ]----------"
+	@cd "BinaryTree" && "$(MAKE)" -f  "BinaryTree.mk" clean
